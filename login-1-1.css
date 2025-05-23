@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img {
+  background: url(photo.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.img::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  padding: 60px 30px;
+  width: 370px;
+  background: rgba(20, 13, 13, 0.04);
+  box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, .75);
+  z-index: 9;
+  transform: translate(-50%, -50%);
+}
+
+.content h2 {
+  color: rgb(255, 250, 247);
+  font-size: 44px;
+  margin: 0 0 35px 0;
+  font-weight: bold;
+}
+
+.failed {
+  position: relative;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  background: rgba(180, 199, 182, 0.627);
+  margin-bottom: 15px;
+}
+
+.failed input {
+  height: 100%;
+  width: 100%;
+  color: #e2e9d8af;
+  font-size: 16px;
+  text-align: start;
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.space {
+  margin-top: 16px;
+}
+
+.failed1 input[type="submit"] {
+  background: #b0b5ba;
+  border: 1px solid #b0b5ba;
+  color: rgb(28, 27, 27);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.failed1 input[type="submit"]:hover {
+  background: #3f7297;
+  border-color: #3f7297;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.failed1 input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #bcb5b5;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.signup {
+  color: white;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.signup a {
+  color: #5285a4;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  outline: none;
+}
+
+.signup a:hover {
+  color: red;
+  transform: translateY(2px);
+  text-decoration: underline;
+}
+
+.signup a:active {
+  color: purple;
+}

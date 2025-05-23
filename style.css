@@ -1,0 +1,616 @@
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.navbar li a:hover {
+  color: #f39c12;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icons div {
+  margin-left: 15px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+ 
+}
+
+
+.navbar-icons div:hover {
+  color: #f39c12;
+  transform: scale(1.1);
+}
+
+#cart-btn, #menu-btn {
+  font-size: 20px;
+}
+
+/* Boxes */
+.cart-box,
+.menu-dropdown {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-dropdown a {
+  display: block;
+  padding: 5px 0;
+  text-decoration: none;
+  color: black;
+}
+
+.menu-dropdown a:hover {
+  background-color: #f0f0f0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('photo\ 5.jpg') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.shop-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: brown;
+}
+
+/* About Section */
+.about-section {
+  padding: 100px 20px;
+  background-color: whitesmoke;
+  position: relative;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  flex-direction: row-reverse;
+}
+
+.about-image {
+  width: 360px;
+  height: auto;
+  margin-right: 20px;
+ 
+}
+.about-section h1 {
+  font-size: 36px;
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-section p {
+  font-size: 22px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: ltr;
+}
+
+/* start here */
+
+.products-section {
+  padding: 50px 20px;
+  background-color: #dcd8d8;
+  text-align: center;
+}
+.products-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Grid Layout for Products */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/* يجعل كل عمود له عرض أدنى 250px ويتوسع ليملأ المساحة المتوفرة.  */
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Product Item Styles */
+.product-item {
+  background-color: #ccc7c7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;/*يمنع تجاوز محتوى المنتج لإطار العنصر.*/
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;/* يضيف تأثيرات سلسة عند التمرير فوق العنصر.*/
+}
+
+.product-item:hover {
+  transform: translateY(-10px) rotateZ(1deg) scale(1.05); /* حركة ثلاثية الأبعاد */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px #a9b823(219, 4, 4, 0.6); /* توهج مميز */
+  background-color: #a9b823; /* تغيير اللون */
+  border-color: #a9b823; /* تعزيز التأثير مع تغيير لون الإطار */
+}
+
+/* Product Image Styles */
+.product-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Button Styles */
+.next-image-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.next-image-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Product Info Styles */
+.product-item h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-item p {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .product-image {
+    height: 250px;
+  }
+
+  .next-image-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-section h1 {
+    font-size: 2rem;
+  }
+
+  .product-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .product-item p {
+    font-size: 1rem;
+  }
+}
+/* add to cart */
+.add-to-cart-btn {
+  background-color: #3b3d3b; /* لون الخلفية */
+  color: white; /* لون النص */
+  border: none; /* إزالة الإطار */
+  border-radius: 8px; /* زوايا مستديرة */
+  padding: 10px 20px; /* مساحة داخلية */
+  font-size: 1rem; /* حجم الخط */
+  cursor: pointer; /* مؤشر اليد عند التحويم */
+  transition: background-color 0.3s ease; /* تأثير التحويم */
+}
+
+.add-to-cart-btn:hover {
+  background-color: #3e8e41; /* لون مختلف عند التحويم */
+}
+
+.add-to-cart-btn:active {
+  background-color: #3e8e41;  /* لون مختلف عند النقر */
+  transform: scale(0.98);   /* تأثير الضغط */
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-item-image {
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.cart-item h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.cart-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+.remove-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #ff1a1a;
+}
+
+/* تنسيق السلة */
+.cart {
+  margin: 20px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.remove-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-total {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.reviews-section {
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+  direction: rtl;
+}
+
+.section-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.reviews-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.review-container {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  margin: 40px 0 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-content {
+  flex: 1;
+}
+
+.name {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 16px;
+}
+
+.review-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.stars {
+  color: #ccc;
+  font-size: 24px;
+}
+
+/* النجوم حسب التقييم */
+.stars[data-rating="1"]::before { content: "★☆☆☆☆"; color: gold; }
+.stars[data-rating="2"]::before { content: "★★☆☆☆"; color: gold; }
+.stars[data-rating="3"]::before { content: "★★★☆☆"; color: gold; }
+.stars[data-rating="4"]::before { content: "★★★★☆"; color: gold; }
+.stars[data-rating="5"]::before { content: "★★★★★"; color: gold; }
+ /* === Footer & Contact Button CSS === */
+ .contact-floating-btn {
+  bottom: 30px;
+  right: 20px;
+  z-index:100px;
+  position: static;
+ 
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.contact-btn i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.contact-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
+  background: linear-gradient(135deg, #ff5252, #ff7676);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(255, 107, 107, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+  }
+}
+
+footer {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand h2 {
+  font-size: 28px;
+  margin: 0 0 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.footer-contact-info p {
+  margin: 5px 0; 
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 10px; 
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+  transform: translateY(-2px);
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: #444;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.social-media {
+  margin: 20px 0;
+}
+
+.social-media a {
+  margin: 0 15px;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #ffcc00;
+  transform: scale(1.2);
+}
+
+footer p {
+  margin: 20px 0 0;
+  font-size: 14px;
+  color: #aaa;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .contact-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .footer-links li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .footer-brand h2 {
+    font-size: 24px;
+  }
+
+  .social-media a {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+}
+

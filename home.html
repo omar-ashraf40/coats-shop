@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>L'a Unique</title>
+  <link rel="stylesheet" href="style.css">
+   <!-- Font Awesome for icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Footer CSS -->
+  <link rel="stylesheet" href="footer2-1.css">
+</head>
+<body>
+  <header>
+    <h2><a href="#" class="logo">L'a Unique</a></h2>
+    <ul class="navbar">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About us</a></li>
+      <li><a href="#products">Product</a></li>
+      <li><a href="#reviews">Review</a></li>
+      <li><a href="#contact">Contact us</a></li>
+       <li><a href="login-1-1.html">Login</a></li>
+    </ul>
+    <div class="navbar-icons">
+      <div class="fas fa-shopping-cart" id="cart-btn"></div>
+      <div class="fas fa-bars" id="menu-btn"></div>
+      </div>
+
+    <div class="cart-box hidden">
+      <p>Your cart is empty.</p>
+    </div>
+
+    <div class="menu-dropdown hidden">
+      <a href="#products" data-filter="men">Men</a>
+      <a href="#products" data-filter="women">Women</a>
+      <a href="#products" data-filter="all">All</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to L'a Unique </h1>
+      <p>Discover Your Unique Style</p>
+      <a href="#products" class="shop-btn">Shop Now</a>
+    </div>
+
+  </section>
+  <section id= "about" class="about-section">
+  <div class="about-content">
+      <h1>About Us</h1>
+      <div class="about-container">
+        <img src="photo_2025-05-01_06-00-53.jpg" alt="Elegant coat" class="about-image" />
+      <p>
+        <br> Welcome to L'a Unique. 
+        we specialize in creating timeless and elegant coats
+        that keep you warm without compromising on style.
+        Our mission is to bring you high-quality outerwear that reflects your personality
+        and adds a touch of class to every outfit.
+        Every piece is designed with love, detail, and the modern individual in mind.
+        Whether it's a chilly morning or a special evening out.
+        <br>L'a Unique coats are made to make you feel confident and unique </br>
+      </p>
+    </div>
+  </div>
+  </section>
+  
+    <section id="products" class="products-section">
+      <h1>Our Products</h1>
+      <div class="product-grid">
+         <!-- المنتج 1 -->
+        <div class="product-item" data-category="women">
+          <img class="product-image" id="product1-img" src="1.jpg" alt="Product 1">
+          <button class="next-image-btn" onclick="changeImage('product1')">→</button>
+          <h3>Classic coat</h3>
+          <p>One size<br>$209.90</p>
+          <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 209.90 })">Add to Cart</button>
+        </div>
+        <!-- المنتج 2 -->
+        <div class="product-item" data-category="women">
+          <img class="product-image" id="product2-img" src="3.jpg" alt="Product 2">
+          <button class="next-image-btn" onclick="changeImage('product2')">→</button>
+          <h3>Classic coat</h3>
+          <p>One size<br>$54.90</p>
+          <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 54.90 })">Add to Cart</button>
+        </div>
+        <!-- المنتج 3 -->
+        <div class="product-item" data-category="women">
+          <img class="product-image" id="product3-img" src="5.jpg" alt="Product 3">
+          <button class="next-image-btn" onclick="changeImage('product3')">→</button>
+          <h3>Classic coat</h3>
+          <p>One size<br>$77.90</p>
+          <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 77.90 })">Add to Cart</button>
+        </div>
+        <!-- المنتج 4 -->
+        <div class="product-item" data-category="women">
+          <img class="product-image" id="product4-img" src="7.jpg" alt="Product 4">
+          <button class="next-image-btn" onclick="changeImage('product4')">→</button>
+          <h3>Classic coat</h3>
+          <p>One size<br>$110</p>
+          <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 110 })">Add to Cart</button>
+        </div>
+        <!-- المنتج 5 -->
+        <div class="product-item" data-category="women">
+          <img class="product-image" id="product5-img" src="9.jpg" alt="Product 5">
+          <button class="next-image-btn" onclick="changeImage('product5')">→</button>
+          <h3>Classic coat</h3>
+          <p>One size<br>$109.90</p>
+          <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 109.90 })">Add to Cart</button>
+        </div>
+         <!-- المنتج 6 -->
+        <div class="product-item" data-category="women">
+          <img class="product-image" id="product6-img" src="11.jpg" alt="Product 6">
+          <button class="next-image-btn" onclick="changeImage('product6')">→</button>
+          <h3>Classic coat</h3>
+          <p>One size<br>$125</p>
+          <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 125 })">Add to Cart</button>
+        </div>
+        <!-- المنتج 7 -->
+        <div class="product-item" data-category="women">
+          <img class="product-image" id="product7-img" src="13.jpg" alt="Product 7">
+          <button class="next-image-btn" onclick="changeImage('product7')">→</button>
+          <h3>Classic coat</h3>
+          <p>One size<br>$135</p>
+          <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 135 })">Add to Cart</button>
+        </div>
+        <!-- المنتج 8 -->
+        <div class="product-item" data-category="women">
+          <img class="product-image" id="product8-img" src="15.jpg" alt="Product 8">
+          <button class="next-image-btn" onclick="changeImage('product8')">→</button>
+          <h3>Classic coat</h3>
+          <p>One size<br>$145</p>
+          <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 145 })">Add to Cart</button>
+        </div>
+        <!--المنتج 9-->
+        <div class="product-item" data-category="women">
+          <img class="product-image" id="product9-img" src="17.jpg" alt="Product 9">
+          <button class="next-image-btn" onclick="changeImage('product9')">→</button>
+          <h3>Classic coat</h3>
+          <p>One size<br>$209.90</p>
+          <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 209.90 })">Add to Cart</button>
+        </div>
+        <!--المنتج10-->
+        <div class="product-item" data-category="women">
+          <img class="product-image" id="product10-img" src="19.jpg" alt="Product 10">
+          <button class="next-image-btn" onclick="changeImage('product10')">→</button>
+          <h3>Classic coat</h3>
+          <p>One size<br>$210</p>
+          <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 210 })">Add to Cart</button>
+        </div>
+        <!--المنتج11-->
+         <div class="product-item" data-category="men">
+          <img class="product-image" id="product11-img" src="21.jpg" alt="Product 11">
+          <button class="next-image-btn" onclick="changeImage('product11')">→</button>
+          <h3>Rain coat</h3>
+          <p>One size<br>$125.50</p>
+          <button class="add-to-cart-btn" onclick="addToCart({ name: 'Rain coat', price: 125.50 })">Add to Cart</button>
+        </div>
+        <!--المنتج12-->
+         <div class="product-item" data-category="men">
+          <img class="product-image" id="product12-img" src="23.jpg"alt="Product 12">
+          <button class="next-image-btn" onclick="changeImage('product12')">→</button>
+          <h3>Trenchcoat</h3>
+          <p>One size<br>$102.25</p>
+             <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 209.90 })">Add to Cart</button>
+        </div>
+        <!--المنتج13-->
+         <div class="product-item" data-category="men">
+          <img class="product-image" id="product13-img" src="25.jpg"alt="Product 13">
+          <button class="next-image-btn" onclick="changeImage('product13')">→</button>
+          <h3>Classic coat</h3>
+          <p>One size<br>$59.99</p>
+             <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 209.90 })">Add to Cart</button>
+        </div>
+        <!--المنتج14-->
+         <div class="product-item" data-category="men">
+          <img class="product-image" id="product14-img" src="27.jpg"alt="Product 14">
+          <button class="next-image-btn" onclick="changeImage('product14')">→</button>
+          <h3>Classic coat</h3>
+          <p>One size<br>$78.66</p>
+             <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 209.90 })">Add to Cart</button>
+         </div>
+         <!--المنتج15-->
+          <div class="product-item" data-category="men">
+            <img class="product-image" id="product15-img" src="29.jpg"alt="Product 15">
+            <button class="next-image-btn" onclick="changeImage('product15')">→</button>
+            <h3>Trenchcoat</h3>
+           <p>One size<br>$149</p>
+              <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 209.90 })">Add to Cart</button>
+           </div>
+           <!--المنتج16-->
+           <div class="product-item" data-category="men">
+            <img class="product-image" id="product16-img" src="31.jpg"alt="Product 16">
+            <button class="next-image-btn" onclick="changeImage('product16')">→</button>
+            <h3>Trenchcoat</h3>
+           <p>One size<br>$45.66</p>
+               <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 209.90 })">Add to Cart</button>
+           </div>
+           <!--المنتج17-->
+           <div class="product-item" data-category="men">
+            <img class="product-image" id="product17-img" src="33.jpg"alt="Product 17">
+            <button class="next-image-btn" onclick="changeImage('product17')">→</button>
+            <h3>Trenchcoat</h3>
+           <p>One size<br>$88.90</p>
+               <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 209.90 })">Add to Cart</button>
+           </div>
+           <!--المنتج18-->
+           <div class="product-item" data-category="men">
+            <img class="product-image" id="product18-img" src="35.jpg"alt="Product 18">
+            <button class="next-image-btn" onclick="changeImage('product18')">→</button>
+            <h3>Trenchcoat</h3>
+           <p>One size<br>$70.90</p>
+               <button class="add-to-cart-btn" onclick="addToCart({ name: 'Classic Coat', price: 209.90 })">Add to Cart</button>
+           </div>
+      </div>
+    </section>
+    <!-- Reviews Section -->
+  <section id="reviews" class="reviews-section">
+    <h1 class="section-title">Reviews</h1>
+    <div class="reviews-wrapper">
+  
+      <div class="review-container">
+        <img src="Alaa Essam.jpg" alt="Alaa Essam" class="profile-pic">
+        <div class="review-content">
+          <h2 class="name">Alaa Essam</h2>
+          <p class="review-text">This coat has amazing fabric quality and fits just right. Totally worth the price!</p>
+          <div class="stars" data-rating="4"></div>
+        </div>
+      </div>
+  
+      <div class="review-container">
+        <img src="Omar Ashraf.jpg" alt="Omar Ashraf" class="profile-pic">
+        <div class="review-content">
+          <h2 class="name">Omar Ashraf</h2>
+          <p class="review-text">Very stylish and well-made. Just wish I had ordered a smaller size.</p>
+          <div class="stars" data-rating="3"></div>
+        </div>
+      </div>
+  
+      <div class="review-container">
+        <img src="Alyaa Hesham.jpg" alt=" Alyaa Hesham" class="profile-pic">
+        <div class="review-content">
+          <h2 class="name">Alyaa Hesham</h2>
+          <p class="review-text">Fantastic coat! Looks even better than the pictures and kept me warm all winter.</p>
+          <div class="stars" data-rating="5"></div>
+        </div>
+      </div>
+  
+      <div class="review-container">
+        <img src="Mohamed Mahdy.jpg" alt=" Mohamed Mahdy" class="profile-pic">
+        <div class="review-content">
+          <h2 class="name">Mohamed Mahdy</h2>
+          <p class="review-text">Great quality, but I wish it came in more color options.</p>
+          <div class="stars" data-rating="4"></div>
+        </div>
+      </div>
+  
+      <div class="review-container">
+        <img src="Jumana Hazem.jpg" alt="Jumana Hazem" class="profile-pic">
+        <div class="review-content">
+          <h2 class="name">Jumana Hazem</h2>
+          <p class="review-text">The coat is nice, but the delivery was a bit slow.</p>
+          <div class="stars" data-rating="3"></div>
+        </div>
+      </div>
+  
+      <div class="review-container">
+        <img src="Mohamed Kamal.jpg" alt="Mohamed Kamal" class="profile-pic">
+        <div class="review-content">
+          <h2 class="name">Mohamed Kamal</h2>
+          <p class="review-text">Super comfortable and elegant. Got so many compliments when I wore it!</p>
+          <div class="stars" data-rating="5"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+   
+
+    <section id= "contact" class="contact"></section>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h2>L’a Unique</h2>
+        </div>
+
+        <div class="footer-contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Fayoum, Egypt</p>
+            <p><i class="fas fa-envelope"></i> LaUnique@website.com</p>
+            <p><i class="fas fa-phone"></i> +20 1094348987</p>
+        </div>
+
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+         <!-- Floating Contact Button -->
+ <div class="contact-floating-btn">
+  <a href="contact-us.html" class="contact-btn">
+  <i class="fas fa-envelope"></i>
+  <span>Contact Us</span>
+  </a>
+</div>
+        <p>© 2025 La'Unique. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // حفظ الحالة الحالية لكل منتج لتغيير الصور
+    let currentImage = {
+    product1: 1,
+    product2: 1,
+    product3: 1,
+    product4: 1,
+    product5: 1,
+    product6: 1,
+    product7: 1,
+    product8: 1,
+    product9: 1,
+    product10: 1,
+    product11: 1,
+    product12: 1,
+    product13: 1,
+    product14: 1,
+    product15: 1,
+    product16: 1,
+    product17: 1,
+    product18: 1,
+  };
+
+  // دالة تغيير الصورة عند الضغط على السهم
+  function changeImage(product) {
+    currentImage[product]++;
+    if (currentImage[product] > 2) {
+        currentImage[product] = 1;
+    }
+    const productImg = document.getElementById(product + '-img');
+    // وضع المسار للصورة الأولى والصورة الثانية لكل منتج
+    if (currentImage[product] === 1) {
+        // تحديد المسار للصورة الأولى لكل منتج
+        if (product === 'product1') {
+            productImg.src = "1.jpg";
+        } else if (product === 'product2') {
+            productImg.src = "3.jpg";
+        } else if (product === 'product3') {
+            productImg.src = "5.jpg";
+        } else if (product === 'product4') {
+            productImg.src = "7.jpg";
+        } else if (product === 'product5') {
+            productImg.src = "9.jpg";
+        } else if (product === 'product6') {
+            productImg.src = "11.jpg";
+        } else if (product === 'product7') {
+            productImg.src = "13.jpg";
+        } else if (product === 'product8') {
+            productImg.src = "15.jpg";
+        } else if (product === 'product9') {
+            productImg.src = "17.jpg";
+       } else if (product === 'product10') {
+            productImg.src = "19.jpg";
+       } else if (product === 'product11') {
+            productImg.src = "21.jpg";
+       } else if (product === 'product12') {
+            productImg.src = "23.jpg";
+       } else if (product === 'product13') {
+            productImg.src = "25.jpg";
+       } else if (product === 'product14') {
+            productImg.src = "27.jpg";
+       } else if (product === 'product15') {
+            productImg.src = "29.jpg";
+       } else if (product === 'product16') {
+            productImg.src = "31.jpg";
+       } else if (product === 'product17') {
+            productImg.src = "33.jpg";
+       } else if (product === 'product18') {
+            productImg.src = "35.jpg";
+        }
+    } else {
+        // وضع المسار للصورة الثانية لكل منتج
+        if (product === 'product1') {
+            productImg.src = "2.jpg";
+        } else if (product === 'product2') {
+            productImg.src = "4.jpg";
+        } else if (product === 'product3') {
+            productImg.src = "6.jpg ";
+        } else if (product === 'product4') {
+            productImg.src = "8.jpg";
+        } else if (product === 'product5') {
+            productImg.src = "10.jpg ";
+        } else if (product === 'product6') {
+            productImg.src = "12.jpg";
+        } else if (product === 'product7') {
+            productImg.src = "14.jpg";
+        } else if (product === 'product8') {
+            productImg.src = "16.jpg ";
+       } else if (product === 'product9') {
+            productImg.src = "18.jpg ";
+      } else if (product === 'product10') {
+            productImg.src = "20.jpg ";
+      } else if (product === 'product11') {
+            productImg.src = "22.jpg ";
+      } else if (product === 'product12') {
+            productImg.src = "24.jpg ";
+      } else if (product === 'product13') {
+            productImg.src = "26.jpg ";
+      } else if (product === 'product14') {
+            productImg.src = "28.jpg ";
+      } else if (product === 'product15') {
+            productImg.src = "30.jpg ";
+      } else if (product === 'product16') {
+            productImg.src = "32.jpg ";
+      } else if (product === 'product17') {
+            productImg.src = "34.jpg ";
+      } else if (product === 'product18') {
+            productImg.src = "36.jpg ";
+        }
+    }
+}
+  </script>
+  <script src="navbar.js"></script>
+
+  <script>
+      let cart = [];
+
+      // دالة لإضافة المنتج إلى السلة
+      function addToCart(product) {
+          cart.push({
+              name: product.name,
+              price: product.price,
+              image: document.getElementById(product.id + '-img').src,
+              id: product.id // نحتفظ بـ ID المنتج لتحديده بسهولة عند الإزالة
+          });
+          updateCart();
+      }
+
+      // دالة لتحديث عرض السلة والإجمالي
+      function addToCart(product) {
+          // إضافة المنتج إلى السلة
+          cart.push({
+              name: product.name,
+              price: product.price,
+              image: product.image, // تأكد أن الصورة متوفرة عند إضافة المنتج
+              id: product.id // نحتفظ بـ ID المنتج لتحديده بسهولة عند الإزالة
+          });
+
+          updateCart();
+      }
+      
+  </script>
+
+</body>
+</html>

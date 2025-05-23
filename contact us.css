@@ -1,0 +1,87 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(135deg,#70551e,#e1d9d9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    direction: rtl;
+  }
+  .contact-container {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    width: 360px;
+    animation: slideDown 1s ease;
+  }
+  
+  @keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .contact-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .contact-form .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form .input-group input,
+  .contact-form .input-group textarea {
+    width: 100%;
+    padding: 10px 10px 10px 5px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .contact-form .input-group label {
+    position: absolute;
+    top: 10px;
+    left: 5px; /* كان right */
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s;
+    text-align: left;
+  }
+  
+  .contact-form .input-group input:focus ~ label,
+  .contact-form .input-group input:valid ~ label,
+  .contact-form .input-group textarea:focus ~ label,
+  .contact-form .input-group textarea:valid ~ label {
+    top: -20px;
+    left: 0; /* كان right */
+    font-size: 14px;
+    color: #4CAF50;
+  }
+  
+  
+  
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #93702b;
+    color: rgb(184, 156, 103);
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #ffffff;
+  }
